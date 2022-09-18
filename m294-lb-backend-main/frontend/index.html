@@ -4,30 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css"/>
-    <script type = "text/javascript" src ="./addTasks.js"></script>
+    <link rel="stylesheet" href="./style/style.css"/>
+    <script type = "text/javascript" src ="./scripts/addTasks.js"></script>
+    <script type = "text/javascript" src ="./scripts/showTasks.js"></script>
+    <script type = "text/javascript" src ="./scripts/editTasks.js"></script>
+    <script type = "text/javascript" src ="./scripts/deleteTasks.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 
     <title>ToDo Liste</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-light navbar-light">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="newTasks.html">New task</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="allTasks.html">All Tasks</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="editTasks.html">Edit Task</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="deleteTasks.html">Delete Tasks</a>
-          </li>
-        </ul>
-      </nav>
 
-    <h1> Wellcome</h1>
+  <div id="container">
+
+    <h1>Add new Task</h1>
+    <form id="newTaskForm">
+      <input type="text" id="inputTitle">
+      <button type="submit" id="submitButton">Send</button>
+    </form>
+
+    <h1>ToDo: </h1>
+    <div id="id">
+    </div>
+    <div id="titel">
+    </div>
+    <div id="status">
+    </div>
+    <div id="edit" >
+    </div>
+
+    <form>
+      <div id="check">
+      </div>
+      <button id="deleteButton" type="submit">Delete</button>
+    </form>
+
+  </div>
+  
 </body>
 </html>

@@ -1,15 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const newTaskForm = document.getElementById("newTaskForm");
-
     const inputTitle = document.getElementById("inputTitle");
 
-    const submitButton = document.getElementById("submitButton");
-
-    newTaskForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-        new FormData(newTaskForm);
-
+    newTaskForm.addEventListener("submit", () => {
+        
         fetch("http://127.0.0.1:3000/tasks", {
             method: 'POST',
             headers: {
