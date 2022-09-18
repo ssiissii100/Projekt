@@ -2,32 +2,57 @@ function showTasks(tasks) {
     const tasksDisplayId = document.getElementById('id');
     const tasksDisplayTitel = document.getElementById('titel');
     const tasksDisplayStatus = document.getElementById('status');
-    const taskDisplayEdit = document.getElementById('edit');
+    const taskDisplayButton = document.getElementById('button');
     const taskDisplayCheckbox = document.getElementById('check');
+
+
 
     tasks.forEach((task) => {
         const taskId = document.createElement('p');
         const taskTitle = document.createElement('p');
         const taskStatus = document.createElement('p');
-        const taskEdit = document.createElement('label');
+        const editButton = document.createElement('BUTTON');
         const taskCheckbox = document.createElement('input');
+
+        taskTitle.className = "editTitle";
 
         taskCheckbox.type = "checkbox";
         taskCheckbox.name = "checkbox";
         taskCheckbox.value= task.id;
         taskCheckbox.id = "checkbox";
-        
-        taskEdit.id = task.id;
-        taskEdit.for
-        taskEdit.innerHTML = "Edit Task" + task.id;
-        taskId.innerText = task.id + task.title + task.completed;
+    
+        editButton.className = "editButton";
+        editButton.id = task.id;
+        editButton.type = "button";
+        editButton.innerHTML = "Edit Task " + task.id;
+
+        taskId.innerText = task.id;
+        taskTitle.innerText = task.title; 
+        taskStatus.innerText = task.completed;
 
         tasksDisplayId.appendChild(taskId);
         tasksDisplayTitel.appendChild(taskTitle);
         tasksDisplayStatus.appendChild(taskStatus);
         taskDisplayCheckbox.appendChild(taskCheckbox);
-        taskDisplayEdit .appendChild(taskEdit);
-        
+        taskDisplayButton.appendChild(editButton);
+
+        const editButtons = document.getElementsByClassName('editButton');
+
+        for(let i = 0; i < editButtons.length; i++) {
+            editButtons[i].addEventListener('click', () => {
+                 
+                editButtonTrigger();
+            
+            })
+        }
+
+        const editTitles = document.getElementsByClassName("editTitle");
+
+        for(let i = 0; i < editTitles.length; i++) {
+            editTitles[i].addEventListener('click', () => {
+                editTitleTrigger();
+            })
+        }
 
     });
 }
@@ -51,3 +76,4 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );    
 })
+

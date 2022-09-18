@@ -1,11 +1,11 @@
-document.addEventListener("DOMContentLoaded", () => {
+const editP = document.getElementsByName("editP");
+const textP = document.getElementsByName("text");
 
-    const taskEdit = document.getElementsByName("edit");
-    const taskTitle = document.getElementsByName("taskTitle");
+function editButtonTrigger() {
+    
+}
 
-    taskEdit.addEventListener("click", function(){
-        alert("dini muetter ffs");
-    })
-
-})
+function editTitleTrigger() {
+    
+}
 
