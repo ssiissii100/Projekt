@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const loginForm = document.getElementById("loginForm")
+    const loginForm = document.getElementById("loginForm");
 
     loginForm.addEventListener("submit", (e) => {
         e.preventDefault();
@@ -11,11 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Accept': 'application/json',
             },
             body: JSON.stringify({
-              email: "test@test.ch",
+              email: "info@example.com",
               password: "m294"
             }),
         })
-            .then((response) => response.json());
+            .then(() => window.location.href = "./index.html");
+        
     })      
 })
 

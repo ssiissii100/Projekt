@@ -1,14 +1,14 @@
 function showTasks(tasks) {
-    const tasksDisplayId = document.getElementById('id');
-    const tasksDisplayTitel = document.getElementById('titel');
-    const tasksDisplayStatus = document.getElementById('status');
-    const taskDisplayButton = document.getElementById('button');
-    const taskDisplayCheckbox = document.getElementById('check');
+    const taskTasks = document.getElementById("table");
 
     tasks.forEach((task) => {
-        const taskId = document.createElement('p');
-        const taskTitle = document.createElement('p');
-        const taskStatus = document.createElement('p');
+        const taskId = document.createElement('td');
+        const taskTitle = document.createElement('td');
+        const taskStatus = document.createElement('td');
+        const editButtonTd = document.createElement('td');
+        const editTaskCheckBoxTd = document.createElement('td');
+        const tableColums = document.createElement('tr');
+
         const editButton = document.createElement('BUTTON');
         const taskCheckbox = document.createElement('input');
 
@@ -18,14 +18,13 @@ function showTasks(tasks) {
         taskCheckbox.name = "checkbox";
         taskCheckbox.value= task.id;
         taskCheckbox.id = "checkbox";
+        taskCheckbox.style.float = "left";
     
-        editButton.className = "editButton";
+        editButton.className = "btn btn-outline-dark"
         editButton.id = task.id;
         editButton.type = "button";
         editButton.innerHTML = "Edit Task " + task.id;
-        editButton.onclick = function(){
-            editButtonTrigger(editButton.id);
-        }
+        editButton.style.display= "inline-block";
 
         taskId.innerText = task.id;
         taskTitle.innerText = task.title; 
@@ -33,12 +32,14 @@ function showTasks(tasks) {
         taskTitle.id = task.id;
         taskTitle.className = "taskTitle";
 
-        tasksDisplayId.appendChild(taskId);
-        tasksDisplayTitel.appendChild(taskTitle);
-        tasksDisplayStatus.appendChild(taskStatus);
-        taskDisplayCheckbox.appendChild(taskCheckbox);
-        taskDisplayButton.appendChild(editButton);
-        
+        taskTasks.appendChild(tableColums);
+        tableColums.appendChild(taskId);
+        tableColums.appendChild(taskTitle);
+        tableColums.appendChild(taskStatus);
+        tableColums.appendChild(editButtonTd);
+        tableColums.appendChild(editTaskCheckBoxTd);
+        editButtonTd.appendChild(editButton);
+        editTaskCheckBoxTd.appendChild(taskCheckbox);
     });
 }
 
@@ -48,7 +49,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const titleArray = [];
     const completedArray = [];
 
-    fetch("http://127.0.0.1:3000/auth/cookie/tasks")
+    fetch("http://127.0.0.1:3000/auth/cookie/tasks",{
+            method : 'GET',
+            credentials: 'include',
+        })
         .then((response) => response.json())
         .then((data) => {
             showTasks(data);

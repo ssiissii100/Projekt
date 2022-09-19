@@ -7,9 +7,10 @@ document.addEventListener("DOMContentLoaded", () => {
         e.preventDefault();
         fetch("http://127.0.0.1:3000/auth/cookie/tasks", {
             method: 'POST',
+            credentials: "include",
             headers: {
                 'Content-Type': 'application/json',
-                'Accept': 'application/json',
+                'Accept': 'application/json'
             },
             body: JSON.stringify({
                 title: inputTitle.value
@@ -19,9 +20,6 @@ document.addEventListener("DOMContentLoaded", () => {
             .then((response) => response.json());
         
     });
-
-
-
 })
 
 

@@ -11,7 +11,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 if(checkbox.checked == 1){
                     
                     fetch("http://127.0.0.1:3000/auth/cookie/task/"+ checkbox.value, {
-                        method: 'DELETE',
+                        method : 'DELETE',
+                        credentials: "include",
+                        
                         headers: {
                             'Content-Type': 'application/json',
                             'Accept': 'application/json',
