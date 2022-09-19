@@ -4,52 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style/style.css"/>
-    <script type = "text/javascript" src ="./scripts/addTasks.js"></script>
-    <script type = "text/javascript" src ="./scripts/showTasks.js"></script>
-    <script type = "text/javascript" src ="./scripts/deleteTasks.js"></script>
-    <script type = "text/javascript" src ="./scripts/logout.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style/login.css"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script type = "text/javascript" src ="./scripts/login.js"></script>
 
-    <title>ToDo Liste</title>
+    <title>Login</title>
 </head>
 <body>
-  <form id = "logoutForm">
-    <button type="submit" id="logoutButton" class="btn btn-dark"> Logout</button>
-  </form>
-
-  <div id="container">
-
     
-    <h1 id = "addTaskTitle">Add new Task</h1>
-    <form id="newTaskForm">
-      <input type="text" id="inputTitle">
-      <button type="submit" id="submitButton" class="btn btn-outline-dark">Add</button>
-    </form>
-    <div id = "todoListContainer">
-      <h1 id="toDoTitle">ToDo: </h1>
-      <table id = "table">
-        <tr>
-          <th>Id</th>
-          <th id = "taskWidth">Task</th>
-          <th>Status</th>
-          <th>Edit</th>
-          <th>Select to delete</th> 
-        </tr>
-      </table> 
-  
-      <form id = "deleteForm">
-        <div id="check">
-        </div>
-        
-        <button id="deleteButton" type="submit" class="btn btn-outline-dark">Delete</button>
-      </form>
-  
-      <form id = "newTitleForm">
-      </form>
+<div class="sidenav">
+    <div class="login-main-text">
+       <h2>Todo List<br>Ük 294</h2>
+       <p>Sibylle Gehring</p>
     </div>
-    
-  </div>
-  
+ </div>
+ <div class="main">
+    <div class="col-md-6 col-sm-12">
+       <div class="login-form">
+          <form id = "loginForm">
+             <div class="form-group">
+                <label>Email</label>
+                <input id = "inputEmail" type="email" class="form-control" placeholder="E-Mail">
+             </div>
+             <div class="form-group">
+                <label>Password</label>
+                <input id = "inputpasswort" type="password" class="form-control" placeholder="Password">
+             </div>
+             <button id = "login" type="submit" class="btn btn-black">Login</button>
+          </form>
+       </div>
+    </div>
+ </div>
 </body>
 </html>

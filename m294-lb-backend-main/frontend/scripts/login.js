@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
               password: "m294"
             }),
         })
-            .then(() => window.location.href = "./index.html");
+            .then(() => window.location.href = "./toDoList.html");
         
     })      
 })

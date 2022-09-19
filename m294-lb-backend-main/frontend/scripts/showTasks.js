@@ -1,5 +1,5 @@
 function showTasks(tasks) {
-    const taskTasks = document.getElementById("table");
+    const taskTable = document.getElementById("table");
 
     tasks.forEach((task) => {
         const taskId = document.createElement('td');
@@ -9,7 +9,7 @@ function showTasks(tasks) {
         const editTaskCheckBoxTd = document.createElement('td');
         const tableColums = document.createElement('tr');
 
-        const editButton = document.createElement('BUTTON');
+        const editButton = document.createElement('button');
         const taskCheckbox = document.createElement('input');
 
         taskTitle.className = "editTitle";
@@ -22,9 +22,9 @@ function showTasks(tasks) {
     
         editButton.className = "btn btn-outline-dark"
         editButton.id = task.id;
-        editButton.type = "button";
+        editButton.type = "submit";
         editButton.innerHTML = "Edit Task " + task.id;
-        editButton.style.display= "inline-block";
+        editButton.onclick = function() {selectTitleId(task.id)};
 
         taskId.innerText = task.id;
         taskTitle.innerText = task.title; 
@@ -32,7 +32,7 @@ function showTasks(tasks) {
         taskTitle.id = task.id;
         taskTitle.className = "taskTitle";
 
-        taskTasks.appendChild(tableColums);
+        taskTable.appendChild(tableColums);
         tableColums.appendChild(taskId);
         tableColums.appendChild(taskTitle);
         tableColums.appendChild(taskStatus);
