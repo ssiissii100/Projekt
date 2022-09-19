@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
             for(const checkbox of checkboxes){
                 if(checkbox.checked == 1){
                     
-                    fetch("http://127.0.0.1:3000/task/"+ checkbox.value, {
+                    fetch("http://127.0.0.1:3000/auth/cookie/task/"+ checkbox.value, {
                         method: 'DELETE',
                         headers: {
                             'Content-Type': 'application/json',
