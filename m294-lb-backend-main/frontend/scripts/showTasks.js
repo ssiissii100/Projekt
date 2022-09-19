@@ -4,11 +4,10 @@ function showTasks(tasks) {
     tasks.forEach((task) => {
         const taskId = document.createElement('td');
         const taskTitle = document.createElement('td');
-        const taskStatus = document.createElement('td');
         const editButtonTd = document.createElement('td');
         const editTaskCheckBoxTd = document.createElement('td');
         const tableColums = document.createElement('tr');
-
+        const taskStatus = document.createElement("img");
         const editButton = document.createElement('button');
         const taskCheckbox = document.createElement('input');
 
@@ -28,14 +27,26 @@ function showTasks(tasks) {
 
         taskId.innerText = task.id;
         taskTitle.innerText = task.title; 
-        taskStatus.innerText = task.completed;
+        
+  
+
         taskTitle.id = task.id;
         taskTitle.className = "taskTitle";
 
         taskTable.appendChild(tableColums);
         tableColums.appendChild(taskId);
         tableColums.appendChild(taskTitle);
-        tableColums.appendChild(taskStatus);
+        if(task.completed == false){
+
+            taskStatus.setAttribute("src","./images/cross.png");
+            taskStatus.style.filter="invert(18%) sepia(99%) saturate(7461%) hue-rotate(359deg) brightness(112%) contrast(108%)";
+            tableColums.appendChild(taskStatus);
+        }else{
+    
+            taskStatus.setAttribute("src","./images/mark.png");
+            taskStatus.style.filter="invert(59%) sepia(99%) saturate(3157%) hue-rotate(85deg) brightness(119%) contrast(122%)";
+            tableColums.appendChild(taskStatus);
+        }
         tableColums.appendChild(editButtonTd);
         tableColums.appendChild(editTaskCheckBoxTd);
         editButtonTd.appendChild(editButton);

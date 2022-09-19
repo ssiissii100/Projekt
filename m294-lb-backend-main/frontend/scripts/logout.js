@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 'Accept': 'application/json',
             },
         })
-            .then(() => window.location.href = "./login.html");
+            .then(() => window.location.href = "./index.html");
         
     })      
     
