@@ -1,11 +1,9 @@
-const editP = document.getElementsByName("editP");
-const textP = document.getElementsByName("text");
-
-function editButtonTrigger() {
+const titles = document.getElementsByClassName("taskTitle");
+const element = document.getElementById("container");
+function editButtonTrigger(taskId){
     
-}
+    location.hash = taskId;
 
-function editTitleTrigger() {
-    
+
 }
 

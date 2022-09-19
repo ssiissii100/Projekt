@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    const newTaskForm = document.getElementById("newTaskForm");
     const inputTitle = document.getElementById("inputTitle");
+    const newTaskForm = document.getElementById("newTaskForm");
 
-    newTaskForm.addEventListener("submit", () => {
-        
+    newTaskForm.addEventListener("submit", (e) => {
+        e.preventDefault();
         fetch("http://127.0.0.1:3000/tasks", {
             method: 'POST',
             headers: {
@@ -16,9 +16,10 @@ document.addEventListener("DOMContentLoaded", () => {
              
             }),
         })
-            .then((response) => response.json())
-
+            .then((response) => response.json());
+        
     });
+
 
 
 })

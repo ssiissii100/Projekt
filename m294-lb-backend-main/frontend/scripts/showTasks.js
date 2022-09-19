@@ -5,8 +5,6 @@ function showTasks(tasks) {
     const taskDisplayButton = document.getElementById('button');
     const taskDisplayCheckbox = document.getElementById('check');
 
-
-
     tasks.forEach((task) => {
         const taskId = document.createElement('p');
         const taskTitle = document.createElement('p');
@@ -25,35 +23,22 @@ function showTasks(tasks) {
         editButton.id = task.id;
         editButton.type = "button";
         editButton.innerHTML = "Edit Task " + task.id;
+        editButton.onclick = function(){
+            editButtonTrigger(editButton.id);
+        }
 
         taskId.innerText = task.id;
         taskTitle.innerText = task.title; 
         taskStatus.innerText = task.completed;
+        taskTitle.id = task.id;
+        taskTitle.className = "taskTitle";
 
         tasksDisplayId.appendChild(taskId);
         tasksDisplayTitel.appendChild(taskTitle);
         tasksDisplayStatus.appendChild(taskStatus);
         taskDisplayCheckbox.appendChild(taskCheckbox);
         taskDisplayButton.appendChild(editButton);
-
-        const editButtons = document.getElementsByClassName('editButton');
-
-        for(let i = 0; i < editButtons.length; i++) {
-            editButtons[i].addEventListener('click', () => {
-                 
-                editButtonTrigger();
-            
-            })
-        }
-
-        const editTitles = document.getElementsByClassName("editTitle");
-
-        for(let i = 0; i < editTitles.length; i++) {
-            editTitles[i].addEventListener('click', () => {
-                editTitleTrigger();
-            })
-        }
-
+        
     });
 }
 
