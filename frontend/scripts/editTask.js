@@ -1,4 +1,7 @@
 function showTask(data) {
+
+    //Fuegt den ausgewaehlten Task der Webseite hinzu
+
     const taskTable = document.getElementById("table");
 
     const taskId = document.createElement('td');
@@ -6,14 +9,16 @@ function showTask(data) {
     const taskStatus = document.createElement("img");
     const tableColums = document.createElement('tr');
 
-    taskTitle.className = "editTitle";
-
     taskId.innerText = data.id;
+
+    taskTitle.className = "editTitle";
     taskTitle.innerText = data.title;
+    
     taskStatus.innerText = data.completed;
 
     tableColums.appendChild(taskId);
     tableColums.appendChild(taskTitle);
+
     if (data.completed == false) {
 
         taskStatus.setAttribute("src", "./images/cross.png");
@@ -28,13 +33,18 @@ function showTask(data) {
         taskTitle.style.textDecoration = "line-through";
         tableColums.appendChild(taskStatus);
     }
+
     taskTable.appendChild(tableColums);
 }
 
 
 document.addEventListener("DOMContentLoaded", () => {
    
+    //Holt die Task Id aus der URL
+
     const selectedTask = window.location.hash.substring(1);
+
+    //Holt die Werte des ausgewaehlten Tasks aus der API
 
     fetch("http://127.0.0.1:3000/auth/cookie/task/" + selectedTask, {
         method: 'GET',
@@ -50,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     cancelButton.onclick = function () {
         window.location.href = "./toDoList.html";
     }
+
+    //Speichert den bearbeiteten Task
 
     saveTask.addEventListener("submit", (e) => {
         e.preventDefault();

@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkboxes = document.getElementsByName("checkbox");
     const deleteForm = document.getElementById("deleteForm");
 
+    //loest die ausgewaehlten Task beim druecken des delete Buttons
+
     deleteForm.addEventListener("submit", (e) => {
         e.preventDefault();
         if (confirm("Are you sure you want to delete the task(s)?")) {

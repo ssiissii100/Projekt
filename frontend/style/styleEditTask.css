@@ -36,14 +36,18 @@ td:nth-child(2) {
     width: 400px;
 }
 
-#deleteButton {
-    margin-left: 90%;
-    width: 100px;
-}
 
 #saveTask {
     margin: 0 auto;
     margin-bottom: 50px;
+}
+
+#saveButton{
+    margin-top: 20px;
+}
+
+#cancelButton{
+    margin-top: 20px;
 }
 
 h1 {

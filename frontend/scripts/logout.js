@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const outForm = document.getElementById("logoutForm");
 
+    //Loescht den Cookie drucken auf den Button und rederected auf die index.html Seite
+    
     outForm.addEventListener("submit", (e) => {
         e.preventDefault();
         fetch("http://127.0.0.1:3000/auth/cookie/logout", {

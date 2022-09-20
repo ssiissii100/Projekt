@@ -19,8 +19,8 @@
 
 #todoListContainer {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 25%;
+
 }
 
 #inputTitle {

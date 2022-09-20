@@ -1,4 +1,7 @@
 function checkTaskStatus() {
+
+    //Fuegt dem Status eine Grafik hinzu und aendert die  Farbe entsprechend
+
     if (task.completed == false) {
 
         taskStatus.setAttribute("src", "./images/cross.png");
