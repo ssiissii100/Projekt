@@ -1,54 +1,52 @@
-#container{
+#container {
 
     border: 3px solid black;
-    border-radius:15px;
-    margin : 50px auto;
+    border-radius: 15px;
+    margin: 50px auto;
     width: 1500px;
 }
 
 
-#logoutButton{
+#logoutButton {
     float: right;
     margin-top: -30px;
     margin-right: 20px;
     margin-bottom: 20px;
 }
 
-#editContainer{
-    margin : 0 auto;
+#editContainer {
+    margin: 0 auto;
     width: 500px;
 }
 
-#inputTitle{
+#inputTitle {
     display: block;
     width: 500px;
     height: 30px;
     margin: 0 auto;
 }
 
-td { 
+td {
     padding-right: 5em;
 }
 
-td:nth-child(2){
+td:nth-child(2) {
     word-wrap: break-word;
     word-break: break-all;
     width: 400px;
 }
 
-#deleteButton{
+#deleteButton {
     margin-left: 90%;
     width: 100px;
 }
-#saveTask{
+
+#saveTask {
     margin: 0 auto;
     margin-bottom: 50px;
 }
 
-h1{
+h1 {
     padding-top: 50px;
     padding-bottom: 20px;
 }
-
-
-

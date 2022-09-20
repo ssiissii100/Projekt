@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-   
+
     const outForm = document.getElementById("logoutForm");
 
     outForm.addEventListener("submit", (e) => {
@@ -13,8 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             },
         })
             .then(() => window.location.href = "./index.html");
-        
-    })      
-    
-    
+
+    })
+
 })

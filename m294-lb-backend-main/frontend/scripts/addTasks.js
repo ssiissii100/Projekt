@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
+
     const inputTitle = document.getElementById("inputTitle");
     const newTaskForm = document.getElementById("newTaskForm");
 
@@ -14,11 +14,13 @@ document.addEventListener("DOMContentLoaded", () => {
             },
             body: JSON.stringify({
                 title: inputTitle.value
-             
+
             }),
         })
-            .then((response) => response.json());
-        
+            .then((response) => response.json())
+            .then(() => {
+                window.location.reload();
+            });
     });
 })
 
