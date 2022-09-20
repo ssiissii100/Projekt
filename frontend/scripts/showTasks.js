@@ -28,8 +28,8 @@ function showTasks(tasks) {
         editButton.innerHTML = "Edit Task " + task.id;
 
         taskId.innerText = task.id;
-
         taskTitle.innerText = task.title;
+
         taskTitle.id = task.id;
         taskTitle.className = "taskTitle";
 
@@ -51,7 +51,6 @@ function showTasks(tasks) {
             taskTitle.style.textDecoration = "line-through";
             tableColums.appendChild(taskStatus);
         }
-        
         tableColums.appendChild(editButtonTd);
         tableColums.appendChild(editTaskCheckBoxTd);
         editButtonTd.appendChild(editButton);
@@ -67,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const completedArray = [];
     
     //Holt alle Waerte der Tasks von der API und fuegt diese einem Array hinzu
-
+    
     fetch("http://127.0.0.1:3000/auth/cookie/tasks", {
         method: 'GET',
         credentials: 'include',

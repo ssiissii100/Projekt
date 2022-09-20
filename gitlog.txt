@@ -1,0 +1,95 @@
+commit 0dda7ead162b5413fb01cc828291fb6f1e158baa
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Tue Sep 20 14:12:37 2022 +0200
+
+    Testprotokoll
+
+commit b748a4692a6279525046a48496567e4ec1ec2c80
+Author: ssiissii100 <79310755+ssiissii100@users.noreply.github.com>
+Date:   Tue Sep 20 13:43:04 2022 +0200
+
+    Update README.md
+
+commit c3a977346025c777197a19879958ad445f710bf5
+Author: ssiissii100 <79310755+ssiissii100@users.noreply.github.com>
+Date:   Tue Sep 20 12:54:58 2022 +0200
+
+    Create README.md
+
+commit 5d62dfdef7dd5e7796dcd935b091eb682b9e848e
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Tue Sep 20 12:52:17 2022 +0200
+
+    ToDo List v1
+
+commit df31fbe10bdab6f0bb383675dac153a2fccdfd7e
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Tue Sep 20 10:41:50 2022 +0200
+
+    backend v5
+
+commit f10df74ba0f9a6d0bb466de9d737116e71a2406d
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Tue Sep 20 10:39:02 2022 +0200
+
+    finished edit
+
+commit a1844192e9799da545871e8e93ff14d671cd7f5c
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Tue Sep 20 08:20:13 2022 +0200
+
+    backend v4
+
+commit 294e82849d4a78300278bdbbda9ef21abee57dd8
+Author: bmit-ges <sibylle.gehring@espas.ch>
+Date:   Mon Sep 19 22:20:31 2022 +0200
+
+    added graphic
+
+commit 3590f792d228a6a8891c520dc882946e9c9bad79
+Author: bmit-ges <sibylle.gehring@espas.ch>
+Date:   Mon Sep 19 20:06:33 2022 +0200
+
+    rederect to edit
+
+commit e895fb50507665cfd8960717449bfc7880efb9f8
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Mon Sep 19 16:35:42 2022 +0200
+
+    added style
+
+commit 6611568cfdceea3c46932623909c77e7aa93aba7
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Mon Sep 19 13:13:55 2022 +0200
+
+    backend v3
+
+commit 758c1c5817bcb8aa0606b295b29cd84370bdd94c
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Mon Sep 19 12:46:04 2022 +0200
+
+    created login form
+
+commit bb6847675327fdf73bbf4c71b8797755822a1a02
+Author: bmit-ges <sibylle.gehring@espas.ch>
+Date:   Sun Sep 18 13:31:50 2022 +0200
+
+    sorted code
+
+commit 3d8d063d65a10288bab7381a0026f8a40493ff1e
+Author: ssiissii100 <sibylle.gehring@hotmail.com>
+Date:   Sun Sep 18 11:18:08 2022 +0200
+
+    delete function
+
+commit d8236ca2709a72bdba9ec35dfcd5f6630d535796
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Wed Sep 14 16:36:31 2022 +0200
+
+    add tasks & show tasks done
+
+commit ac6facca7bdaa7be1b34bccb61a67d33121fbc3d
+Author: vmadmin <vmadmin@vmNodeJS.local.zli.ch>
+Date:   Wed Sep 14 11:05:23 2022 +0200
+
+    backend

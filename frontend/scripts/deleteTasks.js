@@ -1,20 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
 
-    const checkboxes = document.getElementsByName("checkbox");
-    const deleteForm = document.getElementById("deleteForm");
+    const checkboxes = document.getElementsByName('checkbox');
+    const deleteForm = document.getElementById('deleteForm');
 
     //loest die ausgewaehlten Task beim druecken des delete Buttons
 
-    deleteForm.addEventListener("submit", (e) => {
+    deleteForm.addEventListener('submit', (e) => {
         e.preventDefault();
-        if (confirm("Are you sure you want to delete the task(s)?")) {
+        if (confirm('Are you sure you want to delete the task(s)?')) {
 
             for (const checkbox of checkboxes) {
                 if (checkbox.checked == 1) {
 
-                    fetch("http://127.0.0.1:3000/auth/cookie/task/" + checkbox.value, {
+                    fetch('http://127.0.0.1:3000/auth/cookie/task/' + checkbox.value, {
                         method: 'DELETE',
-                        credentials: "include",
+                        credentials: 'include',
 
                         headers: {
                             'Content-Type': 'application/json',
